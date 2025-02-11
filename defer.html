@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Why use defer?</title>
+  </head>
+  <body>
+    <h1>How defer Works:</h1>
+    <ol>
+      <li>
+        The browser starts downloading app.js in parallel with parsing the HTML.
+      </li>
+      <li>
+        The script execution is deferred until the HTML document is fully
+        parsed.
+      </li>
+      <li>
+        If multiple scripts have defer, they are executed in order as they
+        appear in the HTML.
+      </li>
+    </ol>
+    <h2>Why use defer?</h2>
+    <ul>
+      <li>
+        Improves page load speed: The browser doesn't block rendering while
+        downloading the script.
+      </li>
+      <li>
+        Ensures DOM is ready: The script executes after the full HTML is parsed,
+        so document.querySelector() and other DOM manipulations won’t fail.
+      </li>
+      <li>
+        Preserves script order: Unlike async, defer ensures scripts run in the
+        order they appear.
+      </li>
+    </ul>
+    <h2>Summary</h2>
+    <ul>
+      <li>Use <\script defer> when the script interacts with the DOM.</li>
+      <li>Use <\script async> for independent scripts like analytics.</li>
+      <li>Use either defer or async, don't leave it blank</li>
+    </ul>
+  </body>
+</html>
