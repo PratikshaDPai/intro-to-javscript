@@ -16,3 +16,15 @@ if (color === "green") {
 } else {
   console.log("Whatever");
 }
+
+//code in ternary
+
+console.log(
+  color === "green"
+    ? "Go"
+    : color === "yellow"
+    ? "Slow"
+    : color === "red"
+    ? "Stop"
+    : "Whatever"
+);
