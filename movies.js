@@ -11,4 +11,8 @@ console.log(lastMovie);
 
 //add another movie to list
 movies.push("Coco");
-console.log(movies);
+
+//using a foreach iterator
+movies.forEach((movie) => {
+  console.log(movie);
+});
