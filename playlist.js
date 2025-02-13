@@ -23,7 +23,7 @@ for (let track of music.myPlaylist) {
 }
 
 delete music.myPlaylist;
-console.log("Display all keys in music");
+console.log("Looping through playlist items");
 let j = 1;
 for (let prop in music) {
   console.log(`Item ${j} in music: ${prop}`);
