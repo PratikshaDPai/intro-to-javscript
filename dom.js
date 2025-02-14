@@ -1,7 +1,3 @@
-let intro = document.createElement("h1");
-intro.innerText = "Intro to the DOM";
-document.body.appendChild(intro);
-
 // In index.html, add a <p> tag below the <h1> and give it a class of "cool".
 
 // Add some content inside the <p> tag. To do this quickly,
@@ -14,3 +10,11 @@ document.body.appendChild(intro);
 
 const paragraphElement = document.querySelector(".cool");
 console.log(paragraphElement);
+let intro = document.createElement("h2");
+intro.innerText = "Intro to the DOM";
+document.querySelector("ol").appendChild(intro);
+
+// Let’s get some practice adding some styles directly to a DOM element. Change
+// the text color of the <p> element to a color of your choosing.
+
+paragraphElement.style.color = "red";
