@@ -27,6 +27,10 @@ paragraphElement.style.color = "red";
 
 const commentElements = document.querySelectorAll("#comments li");
 console.log(commentElements);
+commentElements.forEach((element) => {
+  element.style.fontSize = "30px";
+});
 for (const li of commentElements) {
+  li.style.fontSize = "20px";
   console.log(li.textContent);
 }
