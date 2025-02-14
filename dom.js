@@ -18,3 +18,15 @@ document.querySelector("ol").appendChild(intro);
 // the text color of the <p> element to a color of your choosing.
 
 paragraphElement.style.color = "red";
+
+// Try to select multiple elements in the DOM
+
+// Use document.querySelectorAll() to select all <li> elements that are nested within the element with id comments.
+//  Assign them to a variable named commentElements.
+// console.log(commentElements) to verify your work.
+
+const commentElements = document.querySelectorAll("#comments li");
+console.log(commentElements);
+for (const li of commentElements) {
+  console.log(li.textContent);
+}
