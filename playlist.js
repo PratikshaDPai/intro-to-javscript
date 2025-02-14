@@ -95,3 +95,4 @@ console.log(music.currentPlaylist[2].length);
 music.currentPlaylist[2].length = "3:54";
 console.log(music.currentPlaylist[2].length);
 console.log(music.currentPlaylist[2].length.length);
+console.log(music.length);
