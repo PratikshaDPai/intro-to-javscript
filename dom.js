@@ -31,7 +31,7 @@ commentElements.forEach((element) => {
   element.style.fontSize = "30px";
 });
 for (const li of commentElements) {
-  li.style.fontSize = "20px";
+  li.style.fontSize = "20px"; //also trying for...of
   console.log(li.textContent);
 }
 
@@ -46,8 +46,19 @@ for (const li of commentElements) {
 
 document.querySelector("p").appendChild(document.createElement("button")); //create button
 const buttonElement = document.querySelector("button");
-buttonElement.textContent = "Submit";
+buttonElement.textContent = "Click Me!";
+buttonElement.setAttribute("id", "submit");
 if (buttonElement.hasAttribute("disabled") === true) {
   buttonElement.removeAttribute("disabled");
 }
-buttonElement.setAttribute("id", "submit");
+
+// Following the examples in the classList documentation,
+// write some code to remove the 'btn' class from the buttonElement,
+// then give it a new class called action-button
+
+// Inspect the element in the DevTools to confirm that this was successful.
+buttonElement.classList.add("btn");
+buttonElement.classList.replace("btn", "action-button");
+//using .className=
+//this ONLY works if we want to replace ALL existing classes with action-button
+buttonElement.className = "action-button";
