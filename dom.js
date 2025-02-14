@@ -34,3 +34,20 @@ for (const li of commentElements) {
   li.style.fontSize = "20px";
   console.log(li.textContent);
 }
+
+// Test out the setAttribute() method.
+// It accepts two arguments - the first is the name of the attribute we would like to change,
+// and the second is the value we would like to change it to.
+// Check out the documentation for setAttribute() for more support.
+
+// Give the buttonElement we created above an id of 'submit'.
+
+// Inspect the element in the DevTools to confirm that this was successful.
+
+document.querySelector("p").appendChild(document.createElement("button")); //create button
+const buttonElement = document.querySelector("button");
+buttonElement.textContent = "Submit";
+if (buttonElement.hasAttribute("disabled") === true) {
+  buttonElement.removeAttribute("disabled");
+}
+buttonElement.setAttribute("id", "submit");
