@@ -66,7 +66,12 @@ class ElectricCar extends Car {
       console.log("Time to recharge!");
     }
   }
+  // override a prototype method
+  toString() {
+    return `This car is a ${this.color} ${this.make} ${this.model}.`;
+  }
 }
 const myLeaf = new ElectricCar("Nissan", "Leaf", "Gray", 2013, 90);
 console.log(myLeaf);
 myLeaf.start();
+console.log(myLeaf.toString());
