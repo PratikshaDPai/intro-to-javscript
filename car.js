@@ -21,9 +21,23 @@ class Car {
       return currentYear - this.year > 25;
     };
   }
+  start() {
+    this.isRunning = true;
+    console.log("Running!");
+  }
+  static about() {
+    //only works for class, not instance
+    console.log("I'm the Car class!");
+  }
 }
 
 // instantiating the class
 const myCar = new Car("Toyota", "Corolla", "Blue", 1995);
 
 console.log(myCar, myCar.isAntique());
+
+myCar.start();
+console.log(myCar);
+
+Car.about();
+//myCar.about(); //throws error: TypeError: myCar.about is not a function
