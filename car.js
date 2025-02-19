@@ -56,5 +56,17 @@ class ElectricCar extends Car {
     super(make, model, color);
     this.batteryCharge = batteryCharge;
   }
+  start() {
+    //trying method overriding
+    if (this.batteryCharge > 0) {
+      this.isRunning = true;
+      console.log("Your electric car is running!");
+    } else {
+      this.isRunning = false;
+      console.log("Time to recharge!");
+    }
+  }
 }
 const myLeaf = new ElectricCar("Nissan", "Leaf", "Gray", 2013, 90);
+console.log(myLeaf);
+myLeaf.start();
