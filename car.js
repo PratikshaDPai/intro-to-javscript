@@ -25,6 +25,10 @@ class Car {
     this.isRunning = true;
     console.log("Running!");
   }
+  stop() {
+    this.isRunning = false;
+    console.log("Stopped");
+  }
   static about() {
     //only works for class, not instance
     console.log("I'm the Car class!");
@@ -41,3 +45,16 @@ console.log(myCar);
 
 Car.about();
 //myCar.about(); //throws error: TypeError: myCar.about is not a function
+
+// Add another instance method.
+// Define a stop method in the Car class.
+// The stop method should set the isRunning property to false
+// and log "Stopped!" to the console.
+
+class ElectricCar extends Car {
+  constructor(make, model, color, year, batteryCharge) {
+    super(make, model, color);
+    this.batteryCharge = batteryCharge;
+  }
+}
+const myLeaf = new ElectricCar("Nissan", "Leaf", "Gray", 2013, 90);
