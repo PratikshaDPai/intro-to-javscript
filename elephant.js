@@ -13,3 +13,15 @@ const isARandomElephantInMyRoom = thingsInMyRoom.some((item) => {
   return item === "random elephant";
 });
 console.log(isARandomElephantInMyRoom);
+
+const thingsInMyRoom2 = [
+  "random elephant",
+  "random elephant",
+  "random elephant",
+  "random elephant",
+];
+
+const isEverythingInMyRoomARandomElephant = thingsInMyRoom2.every(
+  (thing) => thing === "random elephant"
+);
+console.log(isEverythingInMyRoomARandomElephant);
